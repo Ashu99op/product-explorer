@@ -1,0 +1,132 @@
+Product Explorer – Live Practical
+Assignment
+1. Overview
+The objective of this assignment is to build a Product Explorer page using Next.js and React.
+The page will fetch product data from a public API and allow users to search, filter, and sort
+products.
+Estimated completion time: ~1 hour
+
+2. Technical Requirements
+Framework
+● Next.js (App Router preferred)
+Libraries / Tools
+● React Hooks
+● Functional Components
+● TypeScript (optional but preferred)
+Styling
+Any quick styling approach can be used:
+● TailwindCSS
+● CSS Modules
+● Basic CSS
+The focus is functionality and structure, not design perfection.
+
+3. API Details
+Use the following public API:
+https://fakestoreapi.com/products
+
+API Response Example
+Each product contains fields similar to:
+{
+id: number
+title: string
+price: number
+description: string
+category: string
+image: string
+}
+
+4. Functional Requirements
+4.1 Product Listing Page
+Create a page:
+/products
+
+Requirements
+● Fetch product data from the API
+● Display products in a grid layout
+● Each product should be shown in a card component
+Product Card Information
+Each card should display:
+● Product Image
+
+● Product Title
+● Product Price
+● Product Category
+
+4.2 Search Functionality
+Add a search input field.
+Behavior
+The search should filter products based on:
+● Product title
+● Product category
+Example
+Search input:
+electronics
+
+Expected result:
+Products containing electronics in either the title or category should appear.
+
+4.3 Smart Filter Input
+Add another input field labeled:
+Smart Filter
+
+This input should support natural-style filter queries.
+Example Inputs
+cheap products
+products under 50
+electronics only
+
+jewelery under 200
+
+Expected Behavior
+Based on the input, apply appropriate filtering such as:
+● Price limits
+● Category filtering
+● Combined conditions
+The implementation approach for parsing these queries is flexible.
+
+4.4 Sorting
+Add a Sort Dropdown with the following options:
+Price: Low → High
+Price: High → Low
+Title: A → Z
+
+Behavior
+The selected option should dynamically update the order of the displayed products.
+
+4.5 Basic Optimization
+Implement at least one of the following:
+● Debounce the search input
+● Memoize filtered product results
+● Prevent unnecessary re-renders
+
+5. Suggested Project Structure
+
+A suggested structure could look like:
+app/
+products/
+page.tsx
+components/
+ProductCard.tsx
+SearchBar.tsx
+SortDropdown.tsx
+utils/
+filterProducts.ts
+
+Developers may structure the project differently if desired.
+
+6. UI Expectations
+A simple layout is sufficient.
+Example structure:
+--------------------------------
+Product Explorer
+[ Search Products ]
+[ Smart Filter ]
+Sort By: [Dropdown]
+--------------------------------
+Product Grid
+--------------------------------
+| Card | Card | Card |
+| Card | Card | Card |
+--------------------------------
+
+Design quality will not be heavily evaluated.
